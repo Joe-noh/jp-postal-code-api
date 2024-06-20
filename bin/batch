@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+for i in {0..99}; do
+    n=$(printf "%02d" $i)
+    jq -c -s . docs/api/v1/${n}*.json > batched/${n}.json
+done
