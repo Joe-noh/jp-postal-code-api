@@ -60,7 +60,7 @@ jobs:
         run: bin/batch
 
       - name: Commit and push to GitHub if needed
-        if: steps.diff.outcome == 'failure'
+        # if: steps.diff.outcome == 'failure'
         # https://github.com/actions/checkout/issues/13#issuecomment-724415212
         run: |
           set -x
