@@ -56,7 +56,7 @@ jobs:
         continue-on-error: true
 
       - name: Create batched files
-        # if: steps.diff.outcome == 'failure'
+        if: steps.diff.outcome == 'failure'
         run: bin/batch
 
       - name: Commit and push to GitHub if needed
